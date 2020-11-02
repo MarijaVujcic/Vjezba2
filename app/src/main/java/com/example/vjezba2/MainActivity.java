@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
         listView.setLayoutManager(layoutManager);
 
 
-        GitData one = new GitData("Marija","repo","3",null);
-        GitData two = new GitData("Marijana","repo2","10",null);
+        GitData one = new GitData("Marija","repo","3",R.drawable.angel_wings_flower_vector_102124_1600x1200);
+        GitData two = new GitData("Marijana","repo2","10",R.drawable.angel_wings_flower_vector_102124_1600x1200);
 
         final ArrayList<GitData> gitDataArrayList = new ArrayList<GitData>();
         gitDataArrayList.add(one);

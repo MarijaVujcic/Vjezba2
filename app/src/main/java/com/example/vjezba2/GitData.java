@@ -1,14 +1,12 @@
 package com.example.vjezba2;
 
-import android.media.Image;
-
 public class GitData {
-    private Image avatar;
+    public Integer avatar;
     public String nameOfOwner;
     public String nameOfRepository;
     public String starsOfRepository;
 
-    public GitData(String name, String repository, String stars, Image avatar)
+    public GitData(String name, String repository, String stars, Integer avatar)
     {
         this.nameOfOwner = name;
         this.nameOfRepository = repository;

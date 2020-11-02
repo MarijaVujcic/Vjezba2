@@ -1,9 +1,9 @@
 package com.example.vjezba2;
 
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -27,11 +27,13 @@ public class GitAdapter extends RecyclerView.Adapter<GitAdapter.GitViewHolder> {
         public TextView repoName;
         public TextView ownerName;
         public TextView starsOfRepo;
+        public ImageView avatar;
         public GitViewHolder(View v){
             super(v);
             repoName = v.findViewById(R.id.repositoryName);
             ownerName = v.findViewById(R.id.ownerName);
             starsOfRepo = v.findViewById(R.id.starCount);
+            avatar = v.findViewById(R.id.avatarImage);
 
         };
 
@@ -46,6 +48,7 @@ public class GitAdapter extends RecyclerView.Adapter<GitAdapter.GitViewHolder> {
         holder.ownerName.setText(mDataset.get(position).nameOfOwner);
         holder.repoName.setText(mDataset.get(position).nameOfRepository);
         holder.starsOfRepo.setText(mDataset.get(position).starsOfRepository);
+        holder.avatar.setImageResource(mDataset.get(position).avatar);
     }
 
     @Override
