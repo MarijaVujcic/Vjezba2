@@ -19,7 +19,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
-    public ArrayList<GitData> gitDataArrayList = new ArrayList<GitData>();
+    public ArrayList<GitData> gitDataArrayList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             for (int i = 0; i < users.size(); i++) {
                 GitData one = new GitData(users.get(i).getOwner().getLogin(), users.get(i).getName(), users.get(i).getStargazersCount(),
-                        R.drawable.angel_wings_flower_vector_102124_1600x1200);
+                        users.get(i).getOwner().getAvatarUrl());
                 gitDataArrayList.add(one);
 
             }

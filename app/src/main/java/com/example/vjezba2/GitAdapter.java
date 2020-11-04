@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 public class GitAdapter extends RecyclerView.Adapter<GitAdapter.GitViewHolder> {
@@ -35,7 +37,7 @@ public class GitAdapter extends RecyclerView.Adapter<GitAdapter.GitViewHolder> {
             starsOfRepo = v.findViewById(R.id.starCount);
             avatar = v.findViewById(R.id.avatarImage);
 
-        };
+        }
 
     }
     public GitAdapter(ArrayList<GitData> myDataset){
@@ -48,7 +50,7 @@ public class GitAdapter extends RecyclerView.Adapter<GitAdapter.GitViewHolder> {
         holder.ownerName.setText(mDataset.get(position).nameOfOwner);
         holder.repoName.setText(mDataset.get(position).nameOfRepository);
         holder.starsOfRepo.setText(mDataset.get(position).starsOfRepository.toString());
-        holder.avatar.setImageResource(mDataset.get(position).avatar);
+        Glide.with(holder.avatar).load(mDataset.get(position).avatar).into(holder.avatar);
     }
 
     @Override

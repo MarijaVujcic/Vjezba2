@@ -1,12 +1,12 @@
 package com.example.vjezba2;
 
 public class GitData {
-    public Integer avatar;
+    public String avatar;
     public String nameOfOwner;
     public String nameOfRepository;
     public Integer starsOfRepository;
 
-    public GitData(String name, String repository, Integer stars, Integer avatar)
+    public GitData(String name, String repository, Integer stars, String avatar)
     {
         this.nameOfOwner = name;
         this.nameOfRepository = repository;
@@ -24,6 +24,14 @@ public class GitData {
     public void setNameOfRepository(String nameOfRepository)
     {
         this.nameOfRepository = nameOfRepository;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 
     public Integer getStarsOfRepository()
