@@ -4,9 +4,9 @@ public class GitData {
     public Integer avatar;
     public String nameOfOwner;
     public String nameOfRepository;
-    public String starsOfRepository;
+    public Integer starsOfRepository;
 
-    public GitData(String name, String repository, String stars, Integer avatar)
+    public GitData(String name, String repository, Integer stars, Integer avatar)
     {
         this.nameOfOwner = name;
         this.nameOfRepository = repository;
@@ -26,12 +26,12 @@ public class GitData {
         this.nameOfRepository = nameOfRepository;
     }
 
-    public String getStarsOfRepository()
+    public Integer getStarsOfRepository()
     {
         return starsOfRepository;
     }
 
-    public void setStarsOfRepository(String starsOfRepository)
+    public void setStarsOfRepository(Integer starsOfRepository)
     {
         this.starsOfRepository = starsOfRepository;
     }

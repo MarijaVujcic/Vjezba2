@@ -47,7 +47,7 @@ public class GitAdapter extends RecyclerView.Adapter<GitAdapter.GitViewHolder> {
     public void onBindViewHolder(@NonNull GitViewHolder holder, int position) {
         holder.ownerName.setText(mDataset.get(position).nameOfOwner);
         holder.repoName.setText(mDataset.get(position).nameOfRepository);
-        holder.starsOfRepo.setText(mDataset.get(position).starsOfRepository);
+        holder.starsOfRepo.setText(mDataset.get(position).starsOfRepository.toString());
         holder.avatar.setImageResource(mDataset.get(position).avatar);
     }
 
